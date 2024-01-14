@@ -20,13 +20,13 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="flex justify-center pt-2">
-      <div className="xl:w-96">
+    <div className="flex justify-center pt-2 items-center">
+      <div className="w-full xl:w-96">
         <div className="relative w-full">
           <input 
             type="search"
             className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded-l transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            placeholder="Search for products, brands and more"
+            placeholder="Search for products, brand and more"
             aria-label="Search"
             value={searchInput}
             onChange={handleInputChange}
