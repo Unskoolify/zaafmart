@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <CarouselPage />
-      <div className="m-5">
+      <div className="m-2 sm:m-5">
         <h1 className="font-bold">Shop By Category</h1>
         <ShopCategory/>
       </div>
