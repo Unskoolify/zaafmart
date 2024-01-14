@@ -77,13 +77,13 @@ export default function ShopCategory() {
     },
   ];
   return (
-    <div>
+    <div className="bg-white"> 
       <div className="card bg-base-100 shadow-xl rounded-xl border-2 mt-5">
       <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-2 p-4 text-center">
         {results.map((result, index) => (
           <div
             key={index}
-            className="bg-white hover:shadow-[#943a9d] shadow rounded-lg border p-6 ml-2 mr-2"
+            className="bg-yellow-100"
           >
             <CardCategory key={index} result={result} />
           </div>
