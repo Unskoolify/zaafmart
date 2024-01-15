@@ -57,33 +57,38 @@ export default function CategoryList() {
       category_id: "62114285b2785194ae9f9938",
       title: "Daal and Oil",
       altTag: "Daal and Oil",
-    }
+    },
   ];
   return (
     <div className="text-gray-600 body-font mt-5">
       <div className="mx-auto flex flex-wrap -m-4">
-        {/* 30% width column */}
-        <div className="p-4 w-full sm:w-1/3 flex flex-col">
-          <div className="rounded-lg bg-blue-300 p-1 flex-1">
-            {/* Content for the 30% width column */}
-            <div className="inline-flex mt-2">
-              <span className="ml-3 text-sm sm:text-3xl">New Arrivals</span>
-              <p className="ml-3 text-sm text-gray-500">Fresh Fruits, purchase here</p>
+        {/* Parent container for both sections */}
+        <div className="flex flex-wrap w-full">
+          {/* 30% width column */}
+          <div className="p-4 w-full md:w-1/3">
+            <div className="rounded-lg bg-blue-300 p-1 flex flex-col items-center justify-center h-full text-center">
+              {/* Content for the 30% width column */}
+              <div>
+                <span className="text-xl sm:text-5xl text-white font-medium">
+                  New Arrivals
+                </span>
+                <p className="text-sm text-white sm:text-3xl">
+                  Fresh Fruits, purchase here
+                </p>
+              </div>
+              <button className="btn btn-outline btn-ghost mt-4">View All</button>
             </div>
-            <button>
-                View
-            </button>
           </div>
-        </div>
 
-        {/* 70% width column */}
-        <div className="p-4 w-full sm:w-2/3 flex flex-col">
-          <div className="rounded-lg bg-gray-100 p-1 flex-1">
-            {/* Grid of cards in the 70% width column */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {results.map((result, index) => (
-                <CatCard key={index} result={result} />
-              ))}
+          {/* 70% width column */}
+          <div className="p-4 w-full md:w-2/3">
+            <div className="rounded-lg bg-gray-100 p-1 flex flex-col justify-between h-full">
+              {/* Grid of cards in the 70% width column */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {results.map((result, index) => (
+                  <CatCard key={index} result={result} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
