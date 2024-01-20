@@ -65,7 +65,7 @@ export default function CategoryList() {
         {/* Parent container for both sections */}
         <div className="flex flex-wrap w-full">
           {/* 30% width column */}
-          <div className="w-full md:w-1/3">
+          <div className="pt-2 w-full md:w-1/3">
             <div className="rounded-lg bg-blue-300 p-1 flex flex-col items-center justify-center h-full text-center">
               {/* Content for the 30% width column */}
               <div>
@@ -81,7 +81,7 @@ export default function CategoryList() {
           </div>
 
           {/* 70% width column */}
-          <div className="sm:pl-2 w-full md:w-2/3">
+          <div className="sm:pl-2 pt-2 w-full md:w-2/3">
             <div className="rounded-lg bg-gray-100 p-1 flex flex-col justify-between h-full">
               {/* Grid of cards in the 70% width column */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
