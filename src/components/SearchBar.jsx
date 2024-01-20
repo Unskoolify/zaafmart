@@ -33,7 +33,7 @@ export default function SearchBar() {
             onKeyDown={handleKeyPress}
           />
           <button 
-            className="absolute top-0 right-0 mt-1 mr-1 flex items-center justify-center w-8 h-8 bg-yellow-400 text-white rounded-full hover:bg-yellow-600 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            className="absolute top-0 right-0 mt-1 mr-1 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-yellow-400 text-white rounded-full hover:bg-yellow-600 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
             type="button"
             onClick={handleSearch}
           >

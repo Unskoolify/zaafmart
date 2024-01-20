@@ -65,7 +65,7 @@ export default function CategoryList() {
         {/* Parent container for both sections */}
         <div className="flex flex-wrap w-full">
           {/* 30% width column */}
-          <div className="p-4 w-full md:w-1/3">
+          <div className="w-full md:w-1/3">
             <div className="rounded-lg bg-blue-300 p-1 flex flex-col items-center justify-center h-full text-center">
               {/* Content for the 30% width column */}
               <div>
@@ -76,12 +76,12 @@ export default function CategoryList() {
                   Fresh Fruits, purchase here
                 </p>
               </div>
-              <button className="btn btn-outline btn-ghost mt-4">View All</button>
+              <button className="btn btn-outline btn-primary mt-4">View All</button>
             </div>
           </div>
 
           {/* 70% width column */}
-          <div className="p-4 w-full md:w-2/3">
+          <div className="sm:pl-2 w-full md:w-2/3">
             <div className="rounded-lg bg-gray-100 p-1 flex flex-col justify-between h-full">
               {/* Grid of cards in the 70% width column */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
