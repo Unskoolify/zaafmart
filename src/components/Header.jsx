@@ -4,9 +4,11 @@ import MenuItem from "./MenuItem";
 import { MdShoppingCart } from "react-icons/md";
 import Link from "next/link";
 import SearchBar from "./SearchBar";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [userInfo, setUserInfo] = useState();
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.localStorage) {
@@ -96,7 +98,8 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex items-center">
-            <div className="justify-end indicator mx-2 hover:bg-gray-500 rounded-full cursor-pointer">
+            <div className="justify-end indicator mx-2 hover:bg-gray-500 rounded-full cursor-pointer"
+            onClick={()=>{router.push('/cart')}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -199,7 +202,8 @@ export default function Header() {
           >
             LOGIN
           </button>
-          <div className="indicator mx-2 text-white hover:bg-gray-500 p-1 rounded-full cursor-pointer">
+          <div className="indicator mx-2 text-white hover:bg-gray-500 p-1 rounded-full cursor-pointer"
+          onClick={()=>{router.push('/cart')}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
