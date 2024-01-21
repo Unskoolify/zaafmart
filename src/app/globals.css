@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-ul-style ul {
+    list-style-type: disc;  /* or 'circle', 'square', etc. */
+    margin-left: 20px;      /* Adjust as needed for indentation */
+}
+
+.capitalize-text {
+    text-transform: capitalize;
+}

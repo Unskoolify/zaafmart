@@ -60,7 +60,7 @@ export default function CategoryList() {
     },
   ];
   return (
-    <div className="text-gray-600 body-font mt-5">
+    <div className="body-font mt-5">
       <div className="mx-auto flex flex-wrap -m-4">
         {/* Parent container for both sections */}
         <div className="flex flex-wrap w-full">

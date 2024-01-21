@@ -17,7 +17,7 @@ export default function CatCard({ result }) {
             />
           </div>
           <div className="pt-2">
-            <h2 className="text-gray-900 text-sm font-medium sm:text-lg hover:text-blue-500">
+            <h2 className="text-gray-900 text-sm font-medium sm:text-lg hover:text-blue-500 capitalize-text">
               {result.category_name}
             </h2>
           </div>
