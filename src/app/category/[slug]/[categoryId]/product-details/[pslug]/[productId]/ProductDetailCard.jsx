@@ -48,7 +48,7 @@ export default function ProductDetailCard({ result }) {
           <h2 className="text-2xl md:text-4xl font-semibold capitalize-text">
             {result.product_name}
           </h2>
-        
+
           <div className="flex items-center mt-2">
             <p className="text-md line-through text-gray-500">
               MRP: {result.old_price}
@@ -57,8 +57,8 @@ export default function ProductDetailCard({ result }) {
               Price: Rs {result.price}
             </p>
             <p className="text-md ml-3">
-            {result.unit} {result.measure_unit}
-          </p>
+              {result.unit} {result.measure_unit}
+            </p>
           </div>
 
           <p className="text-md text-red-300">You Save: {result.discount}</p>
@@ -68,7 +68,7 @@ export default function ProductDetailCard({ result }) {
             dangerouslySetInnerHTML={{ __html: result.product_description }}
           />
           {/* Quantity Selector */}
-          <div className="flex items-center mt-4">
+          <div className="flex items-center justify-center md:justify-start mt-4">
             <button
               className="btn btn-outline btn-warning mr-2"
               onClick={decrementQuantity}
@@ -83,6 +83,53 @@ export default function ProductDetailCard({ result }) {
               +
             </button>
             <button className="btn btn-warning ml-3">Add to cart</button>
+          </div>
+          <div className="max-w-md items-center mt-5">
+            <p className="text-m font-bold">Select Packet Size</p>
+            {/* Pack Size Option - Selected */}
+            <div className="flex justify-between items-center bg-green-100 p-2 rounded-lg mb-2 mt-2">
+              <div className="font-bold text-green-800">1 kg</div>
+              <div>
+                <div className="font-bold">Rs 89</div>
+                <div className="text-sm line-through text-gray-500">
+                  MRP: Rs 210
+                </div>
+              </div>
+              <div className="bg-green-500 text-white rounded-full p-2">
+                <div>59% Off</div>
+              </div>
+              <div className="text-green-500">{/* Check icon */}</div>
+            </div>
+
+            {/* Pack Size Option - Not Selected */}
+            <div className="flex justify-between items-center border p-2 rounded-lg mb-2">
+              <div>250 g</div>
+              <div>
+                <div className="font-bold">Rs 42.34</div>
+                <div className="text-sm line-through text-gray-500">
+                  MRP: Rs 58
+                </div>
+              </div>
+              <div className="text-green-500">
+                <div>27% Off</div>
+              </div>
+              <div className="text-gray-300">{/* Check icon */}</div>
+            </div>
+
+            {/* Another Pack Size Option - Not Selected */}
+            <div className="flex justify-between items-center border p-2 rounded-lg">
+              <div>500 g</div>
+              <div>
+                <div className="font-bold">Rs 44.50</div>
+                <div className="text-sm line-through text-gray-500">
+                  MRP: Rs 111
+                </div>
+              </div>
+              <div className="text-green-500">
+                <div>60% Off</div>
+              </div>
+              <div className="text-gray-300">{/* Check icon */}</div>
+            </div>
           </div>
         </div>
       </div>
